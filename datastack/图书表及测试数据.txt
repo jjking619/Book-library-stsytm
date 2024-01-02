@@ -1,0 +1,60 @@
+图书信息表 t_book		
+字段	类型	说明
+isbn	varchar(13)	书号，主键
+title	varchar(100)	书名
+author	varchar(60)	作者
+publisher	varchar(100)	出版社
+publishdate	varchar(10)	出版日期
+number	int	图书数量
+
+create table if not exists t_book (isbn varchar(13) primary key, title varchar(100), author varchar(60), publisher varchar(100), publishdate varchar(10), number int);
+
+
+以下是添加测试数据的 SQL 语句：
+
+```sql
+-- 添加测试数据
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787557000001', '从你的全世界路过', '张嘉佳', '湖南文艺出版社', '2013-03-01', 8);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787101000033', '人类简史', '尤瓦尔·赫拉利', '商务印书馆', '2015-06-01', 10);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787544253994', '非暴力沟通', '马歇尔·卢森堡', '中国华侨出版社', '2009-10-01', 5);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787535732307', '明朝那些事儿第一部', '当年明月', '中国文联出版社', '2006-08-01', 3);
+
+-- 继续添加其他测试数据…
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787506365437', '活着', '余华', '南海出版公司', '2012-08-01', 7);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787549550173', '麦田里的守望者', '塞林格', '河北教育出版社', '2009-06-01', 6);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787505715660', '边城', '沈从文', '作家出版社', '2001-09-01', 1);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787108009821', '百年孤独', '马尔克斯', '作家出版社', '2003-08-01', 4);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787511323306', '编程珠玑', '乔恩·本特利', '电子工业出版社', '2013-06-01', 12);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787111124226', '现代操作系统', '安德鲁·S·汤普森', '机械工业出版社', '2004-01-01', 5);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787115473326', '数据库系统概论', '李健主编', '人民邮电出版社', '2010-01-01', 9);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787111128064', '计算机网络', '谢希仁', '机械工业出版社', '2006-01-01', 8);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787302100011', '数据结构', '严蔚敏', '清华大学出版社', '2005-01-01', 20);
+
+INSERT INTO t_book (isbn, title, author, publisher, publishdate, number)
+VALUES ('9787111146051', '算法导论', 'Cormen', '机械工业出版社', '2013-03-01', 15);
+
