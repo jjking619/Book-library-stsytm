@@ -26,7 +26,11 @@
    <bool>true</bool>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>图书管理系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon_avg7ubu7jxa/考试_大.png</normaloff>icon_avg7ubu7jxa/考试_大.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QLabel#label_title_login,QLabel#label_title_register{
@@ -38,7 +42,8 @@ QLabel{
 }
 QLineEdit{
        font: 10pt &quot;楷体&quot;;
-	
+       border:2px solid rgb(20,196,188);
+       border-radius:15px;
  }
 
 QPushButton{
@@ -48,12 +53,11 @@ QPushButton{
 	background-color: #fc5731;
 }
 QWidget#page_login{
-    
-	background-image: url(jka/jka.png);
+      
+	border-image: url(jka/login.png);
 }
 QWidget#page_register{
-	
-	border-image: url(jka/01.png);
+	border-image: url(jka/user.png);
 }
 
 

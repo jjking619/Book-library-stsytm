@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>881</width>
-    <height>648</height>
+    <width>1002</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>图书管理系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon_avg7ubu7jxa/tushu.png</normaloff>icon_avg7ubu7jxa/tushu.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QToolButton{
@@ -61,7 +65,95 @@ QPushButton{
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
       </property>
+      <property name="styleSheet">
+       <string notr="true">
+QMainWindow {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}   
+
+/* 设置普通小部件（如标签、按钮）的背景色 */
+QWidget {
+    background-color: #f0f0f0;
+}
+
+/* 设置分隔线样式 */
+QWidget#separator {
+    background-color: #d9d9d9;
+    height: 1px;
+    margin: 10px 0;
+}
+
+mainWindow#page_main{
+	border-image: url(jka/charts.jpg);
+}
+
+/* 设置窗口内部小部件背景色和圆角 */
+QWidget#widget {
+    background-color: #434a50;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* 设置工具按钮样式 */
+QToolButton {
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #2E86C1; /* 按钮背景色 */
+    border-radius: 20px; /* 圆形按钮 */
+    font: 14pt &quot;楷体&quot;;
+}
+
+/* 鼠标悬停在工具按钮上时的样式 */
+QToolButton:hover {
+    background-color: #3498DB; /* 按钮背景色 */
+}
+
+/* 选中状态的工具按钮样式 */
+QToolButton:checked {
+    background-color: #E74C3C; /* 按钮背景色 */
+}
+
+/* 设置按钮样式 */
+QPushButton {
+    font: 14pt &quot;楷体&quot;;
+    width: 120px;
+    height: 40px;
+    background-color: #27AE60; /* 按钮背景色 */
+    border-radius: 5px;
+}
+
+/* 鼠标悬停在按钮上时的样式 */
+QPushButton:hover {
+    background-color: #2ECC71; /* 按钮背景色 */
+}
+</string>
+      </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QToolButton" name="toolButton_main">
+         <property name="text">
+          <string>借阅情况</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>icon_avg7ubu7jxa/nav_wodejieyuejilu.png</normaloff>icon_avg7ubu7jxa/nav_wodejieyuejilu.png</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoRepeat">
+          <bool>false</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextBesideIcon</enum>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QToolButton" name="toolButton_user">
          <property name="tabletTracking">
@@ -183,8 +275,8 @@ QPushButton{
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>17</width>
-           <height>426</height>
+           <width>20</width>
+           <height>40</height>
           </size>
          </property>
         </spacer>
@@ -194,34 +286,85 @@ QPushButton{
     </item>
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true"> QToolButton {
+            width: 160px;
+            height: 40px;
+            color: #ffffff;
+            background-color: #2E86C1;
+            border-radius: 20px; /* 圆形按钮 */
+            font: 14pt &quot;楷体&quot;;
+        }
+
+        /* 鼠标悬停在工具按钮上时的样式 */
+        QToolButton:hover {
+            background-color: #3498DB;
+        }
+
+        /* 选中状态的工具按钮样式 */
+        QToolButton:checked {
+            background-color: #E74C3C;
+        }
+
+        /* 设置标签样式 */
+        QLabel {
+            font: 14pt &quot;楷体&quot;;
+            color: #55aaFF;
+        }
+
+        /* 设置按钮样式 */
+        QPushButton {
+            font: 14pt &quot;楷体&quot;;
+            width: 120px;
+            height: 40px;
+            background-color: #27AE60;
+            border-radius: 5px;
+        }
+
+        /* 鼠标悬停在按钮上时的样式 */
+        QPushButton:hover {
+            background-color: #2ECC71;
+        }</string>
+      </property>
       <property name="currentIndex">
        <number>2</number>
       </property>
       <widget class="QWidget" name="page_main">
-       <layout class="QHBoxLayout" name="horizontalLayout_14">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="font">
-           <font>
-            <family>楷体</family>
-            <pointsize>14</pointsize>
-            <weight>50</weight>
-            <italic>false</italic>
-            <bold>false</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color: rgb(0, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>欢迎使用Python图书管理系统</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>100</y>
+          <width>601</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>0</y>
+          <width>341</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 48pt &quot;Century Schoolbook&quot;
+
+rgb(0, 255, 255);
+QLabel {
+    align: center;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>welcome</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_user">
        <layout class="QVBoxLayout" name="verticalLayout">
